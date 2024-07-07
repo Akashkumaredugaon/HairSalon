@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hairsalon/view/screen/intro/intro_screen.dart';
 import 'package:hairsalon/view/screen/splash/splash_screen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
+      home: IntroScreen(),
     );
   }
 }

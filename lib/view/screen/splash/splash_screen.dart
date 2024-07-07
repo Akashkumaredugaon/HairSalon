@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:hairsalon/view/screen/intro/intro_screen.dart';
 import 'package:hairsalon/view/screen/splash/splash_widget.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -15,6 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     Timer(Duration(seconds: 4), () {
+
+      Navigator.push(context,MaterialPageRoute(builder: (context) => IntroScreen(),));
 
     },);
     super.initState();
