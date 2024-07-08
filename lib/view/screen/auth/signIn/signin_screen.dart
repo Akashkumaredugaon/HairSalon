@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hairsalon/view/screen/auth/signin_widget.dart';
+import 'package:hairsalon/view/screen/auth/signIn/signin_widget.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});

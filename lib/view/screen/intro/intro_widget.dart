@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hairsalon/view/screen/auth/signin_screen.dart';
+import 'package:hairsalon/view/screen/auth/signIn/signin_screen.dart';
 import 'package:hairsalon/view/utils/app_widget/app_size_box.dart';
 import 'package:hairsalon/view/utils/app_widget/app_text.dart';
 import 'package:hairsalon/view/utils/size.dart';

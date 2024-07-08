@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hairsalon/view/screen/auth/signin_screen.dart';
+import 'package:hairsalon/view/screen/auth/signIn/signin_screen.dart';
 
 
 void main() {

@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hairsalon/view/screen/auth/signUp/signup_screen.dart';
 import 'package:hairsalon/view/utils/app_widget/app_text_field.dart';
 import 'package:hairsalon/view/utils/colors.dart';
 
-import '../../utils/size.dart';
+import '../../../utils/size.dart';
 
 
 class SignInWidget {
-
-
-
 
   Container view() {
     return Container(
@@ -47,7 +45,7 @@ class SignInWidget {
           children: [
             AppTextField().appTextField("Enter the email"),
             SizedBox(height:AppSizes(context: context).getHeight/40),
-            AppTextField().appTextField("Enter the password"),
+            AppTextField().appTextField("Enter the password",icon: Icons.remove_red_eye_outlined),
             SizedBox(height:AppSizes(context: context).getHeight/40),
 
             Row(
@@ -66,19 +64,23 @@ class SignInWidget {
                   borderRadius: BorderRadius.circular(10), // Rounded corners
                 ),
               ),
-              onPressed: () {  },
-              child: Text("Get Started", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => SignupScreen(),));
+              },
+              child: Text("Sign Up", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
 
             ),
             SizedBox(height:AppSizes(context: context).getHeight/40),
             Row(
               children: [
                 Expanded(child: Divider(thickness: 1,)),
-                Expanded(child: Padding(
+                Expanded(
+                    child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text("Or sign In With"),
                 )),
-                Expanded(child: Divider(thickness: 1,)),
+                Expanded(
+                    child: Divider(thickness: 1,)),
               ],
             ),
 
