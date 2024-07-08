@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-const primaryColor = Colors.orange;
+const primaryColor = Colors.deepOrangeAccent;
 const secondaryColor = Colors.black;
 
 // text color
@@ -9,7 +9,6 @@ const normalTextColor =Colors.grey;
 const boldTextColor = Colors.black;
 
 //button color
-
 const buttonColor=primaryColor;
 
 //icon color

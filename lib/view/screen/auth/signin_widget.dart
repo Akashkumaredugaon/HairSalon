@@ -17,7 +17,7 @@ class SignInWidget {
       child: Stack(
         children: [
           Positioned(
-            top: 80, // Adjust this value to position the image as needed
+            top: 60, // Adjust this value to position the image as needed
             left: 0, // Adjust this value to position the image as needed
             right: 0, // Adjust this value to position the image as needed
             child: Image.asset(
@@ -32,7 +32,7 @@ class SignInWidget {
 
   Container aboutView(BuildContext context) {
     return Container(
-      height: 500,
+      height: 550,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.only(
@@ -67,7 +67,7 @@ class SignInWidget {
                 ),
               ),
               onPressed: () {  },
-              child: Text("Get Started", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
+              child: Text("Sign In", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
 
             ),
             SizedBox(height:AppSizes(context: context).getHeight/40),

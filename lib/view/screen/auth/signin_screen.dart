@@ -12,7 +12,7 @@ class SignInScreen extends StatelessWidget {
         children: [
           signInClass.view(),
           Positioned(
-            top: 260, // Adjust this value to move the second container up or down
+            top: 230, // Adjust this value to move the second container up or down
             left: 0,
             right: 0,
             child: signInClass.aboutView(context),
