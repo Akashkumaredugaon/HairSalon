@@ -9,6 +9,8 @@ import 'package:hairsalon/view/utils/colors.dart';
 import 'package:hairsalon/view/utils/shape/app_shape.dart';
 import 'package:hairsalon/view/utils/style/button_style.dart';
 
+import '../../utils/size.dart';
+
 class IntroScreen extends StatefulWidget {
   @override
   _IntroScreenState createState() => _IntroScreenState();
@@ -24,28 +26,58 @@ class _IntroScreenState extends State<IntroScreen> {
     var view=IntroWidget(context, _currentIndex, _pageController);
     return Scaffold(
       backgroundColor: Colors.white,
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
+      body: Column(
         children: [
-         view.buildPage(
-            title: "Find barbershop nearby",
-            description: "Choose your hair style Choose your hair style Choose your hair style ",
-            imagePath: "assets/images/introimage.jpg",
+          Expanded(
+            flex: 5,
+            child: PageView(
+              controller: _pageController,
+              onPageChanged: (index) {
+                setState(() {
+                  _currentIndex = index;
+                });
+              },
+              children: [
+               view.buildPage(
+                  title: "Find barbershop nearby",
+                  description: "Choose your hair style Choose your hair style Choose your hair style ",
+                  imagePath: "assets/images/introimage.jpg",
+                ),
+                view.buildPage(
+                  title: "Attractive Promotions",
+                  description: "Choose your hair style Choose your hair style Choose your hair style",
+                  imagePath: "assets/images/introimage.jpg",
+                ),
+                view.buildPage(
+                  title: "The Professional Specialists",
+                  description: "Choose your hair style Choose your hair style Choose your hair style",
+                  imagePath: "assets/images/introimage.jpg",
+                ),
+
+              ],
+            ),
           ),
-          view.buildPage(
-            title: "Attractive Promotions",
-            description: "Choose your hair style Choose your hair style Choose your hair style",
-            imagePath: "assets/images/introimage.jpg",
-          ),
-          view.buildPage(
-            title: "The Professional Specialists",
-            description: "Choose your hair style Choose your hair style Choose your hair style",
-            imagePath: "assets/images/introimage.jpg",
+          Expanded(
+            child: Container(
+              color: Colors.white,
+              child: Stack(
+                children: [
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0), // Adjust padding as needed
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(3, (index) {
+                          return view.buildDotIndicator(index == _currentIndex);
+                        }),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
           ),
 
         ],

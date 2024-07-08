@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hairsalon/view/screen/auth/signin_screen.dart';
 import 'package:hairsalon/view/utils/app_widget/app_size_box.dart';
 import 'package:hairsalon/view/utils/app_widget/app_text.dart';
 import 'package:hairsalon/view/utils/size.dart';
@@ -37,7 +38,7 @@ class IntroWidget{
   void _navigateToHome() {
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => SplashScreen()),
+      MaterialPageRoute(builder: (context) => SignInScreen()),
     );
   }
 
@@ -60,13 +61,8 @@ class IntroWidget{
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: semiBoldFontSize),
         ),
-        SizedBox(height:AppSizes(context: context).getHeight/30),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(3, (index) {
-            return buildDotIndicator(index == _currentIndex);
-          }),
-        ),
+
+
       ],
     );
   }
@@ -118,7 +114,7 @@ class IntroWidget{
               borderRadius: BorderRadius.circular(10), // Rounded corners
             ),
           ),
-          child: Text("Get Started", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
+          child: Text("Sign In", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
 
         ),
       ),
