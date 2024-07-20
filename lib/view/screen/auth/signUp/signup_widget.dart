@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hairsalon/view/screen/auth/signIn/signin_screen.dart';
+import 'package:hairsalon/view/screen/landing/home_screen.dart';
 import 'package:hairsalon/view/utils/app_widget/app_text_field.dart';
 import 'package:hairsalon/view/utils/colors.dart';
 
@@ -62,7 +63,7 @@ class SignUpWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen(),));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
               },
               child: Text("Sign Up", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
 

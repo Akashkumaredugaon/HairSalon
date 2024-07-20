@@ -114,7 +114,7 @@ class IntroWidget{
               borderRadius: BorderRadius.circular(10), // Rounded corners
             ),
           ),
-          child: Text("Sign In", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
+          child: Text("Get Start", style: TextStyle(fontSize: semiBoldFontSize,color: Colors.white)),
 
         ),
       ),
